@@ -23,7 +23,7 @@ class LinkedList{
        return $this->head === null;
     }
 
-    public function insert(?string $data){
+    public function insert(?string $data) : void{
         $node = new Node($data);
         if ($this->isEmpty()){
             $this->head = $node;

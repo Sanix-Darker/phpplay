@@ -1,6 +1,9 @@
 <?php
 
-function runIt(int $wait) {
+function runIt(true|int $wait) {
+    if ($wait instanceof bool){
+        echo "WHAT ??";
+    }
     sleep($wait);
     echo "\nHello am doing something... waited ${wait}s";
 }
@@ -12,6 +15,6 @@ function decored(
 ): void{
     call_user_func_array($fn, $args);
 }
-
-decored('runIt', [3]);
+runIt(false);
+// decored('runIt', [3]);
 // decored($doSomething, []);

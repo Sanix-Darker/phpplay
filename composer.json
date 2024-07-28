@@ -1,0 +1,5 @@
+{
+    "require": {
+        "sagittaracc/php-python-decorator": "^6.4"
+    }
+}
