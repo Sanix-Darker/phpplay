@@ -14,7 +14,7 @@ class User{
     public function setName(string $name): void{
         if(strlen($name) < 3 || strlen($name) > 10){
             throw new ValidationError(
-                "name ".$name." len is not between 3 < x < 10"
+                "name $name len is not between 3 < x < 10"
             );
         }
         $this->name = $name;
@@ -23,7 +23,7 @@ class User{
     public function setAge(int $age): void{
         if($age < 10 || $age > 50){
             throw new ValidationError(
-                "age ".$age." should be between 10 < x < 50"
+                "age $age should be between 10 < x < 50"
             );
         }
         $this->age = $age;
